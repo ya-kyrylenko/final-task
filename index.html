@@ -12,7 +12,7 @@
 			<button data-bind="click: turnOnSlide2" class="button2">Calculator</button>
 			<button>Competitors</button>
 		</nav>
-		<section class="" data-bind="visible: firstSlide">
+		<section class="slide-graphic" data-bind="visible: firstSlide">
 			<h2>Xarelto<sup>®</sup>: An Effective Treatment Option<br/>in Your VTE Patients width Cancer<sup>a,8</sup></h2>
 			<p class="signature">%PATIENTS<sup>b</sup></p>
 			<div class="graphics" >
@@ -53,6 +53,125 @@
 					<sup>b</sup>Outcome: symptomatic, recurrent VTE.</p>
 				</div>
 			</div>
+		</section>
+		<section class="slide-calculator" data-bind="visible: secondSlide">
+			<h2>Xarelto<sup>®</sup>Estimator of Resources Saved</h2>
+			<div class="firstCalculator">
+				<div class="top-calculator">
+					<div class="inputSector">
+						<input type="text" placeholder="Enter number of DVT patients here" data-bind="value:numperDVT"/>
+						<button>CALCULATE</button>
+						<button>?</button>
+					</div>
+					<p class="inputDescription">
+						Assumptions to estimate calculations: proportion of patients with DVT contraindicated<br/>for Xarelto or LMWH/VKA<sup>1,2</sup> = 7.5%<br/>Number of patients with DVT – 7.5% = <span class="number" data-bind="text:numberPatients()"> </span> Total number of DVT patients<br/>eligible for dual LMWH/VKA or Xarelto
+					</p>
+				</div>
+				<div class="calculatorBlocks">
+					<div class="calculatorResult">
+						<p>Injections avoided<sup>3-7</sup></p>
+						<input type="text" data-bind="value: injections()"/>
+					</div>
+					<div>
+						<button>+</button>
+						<p>Injections avoided = number of LMWH injections received by cancer patients with DVT + LMWH injections received by DVT patients without cancer</p>
+					</div>
+				</div>
+				<div class="calculatorBlocks">
+					<div class="calculatorResult">
+						<p>INR clinic visits avoided<sup>3,7,8</p>
+						<input type="text" data-bind="value: visitsINR()">
+					</div>
+					<div>
+						<button>+</button>
+						<p>INR clinic avoided = number of DVT patients eligible for VKA treatment x number of INR monitoring visits per patient</p>
+					</div>
+				</div>
+				<div class="calculatorBlocks">
+					<div class="calculatorResult">
+						<p>Nurse visits avoided<sup>9</p>
+						<input type="text" data-bind="value: visitsNurse()">
+					</div>
+					<div>
+						<button>+</button>
+						<p>Nurse assistance visits avoided = number of non-cancer DVT patients eligible for initial LMWH treatment x proportion of these patients treated by nurses in their own homes x mean number of LMWH injections administrated</p>
+					</div>
+				</div>
+				<div class="calculatorBlocks">
+					<div class="calculatorResult">
+						<p>Hospital bed days saved<sup>10</sup></p>
+						<input type="text" data-bind="value: daysSaved()">
+					</div>
+					<div>
+						<button>+</button>
+						<p>Hospital bed days saved = number of eligible DVT patients x proportion of DVT patients hospitalised x number of hospital bed days saved per DVT patient treated with Xarelto</p>
+					</div>
+				</div>
+			</div>
+			<div class="secondCalculator">
+				<div class="top-calculator">
+					<div class="inputSector">
+						<input type="text" placeholder="Enter number of DVT patients here" data-bind="value: numberPE"/>
+						<button>CALCULATE</button>
+						<button>?</button>
+					</div>
+					<p class="inputDescription">
+						Assumptions to estimate calculations: proportion of patients with PE contraindicated<br/>for Xarelto or LMWH/VKA<sup>1,2</sup> = 7.5%<br/>Number of patients with PE – 7.5% = <span class="number" data-bind="text:numberPatients2()"> </span> Total number of PE patients<br/>eligible for dual LMWH/VKA or Xarelto
+					</p>
+				</div>
+				<div class="calculatorBlocks">
+					<div class="calculatorResult">
+						<p>Injections avoided<sup>3-6,11</sup></p>
+						<input type="text" placeholder="[B+C]" data-bind="value: injections2()">
+					</div>
+					<div>
+						<button>+</button>
+						<p>Injections avoided = number of LMWH injections received by cancer patients with PE + LMWH injections received by PE patients without cancer</p>
+					</div>
+				</div>
+				<div class="calculatorBlocks">
+					<div class="calculatorResult">
+						<p>INR clinic visits avoided<sup>3,7,8</sup></p>
+						<input type="text" placeholder="[I]" data-bind="value: visitsINR2()">
+					</div>
+					<div>
+						<button>+</button>
+						<p>INR clinic avoided = number of PE patients eligible for VKA treatment x number of INR monitoring visits per patient</p>
+					</div>
+				</div>
+				<div class="calculatorBlocks">
+					<div class="calculatorResult">
+						<p>Hospital bed days saved<sup>10</sup></p>
+						<input type="text" placeholder="[J]" data-bind="value: daysSaved2()">
+					</div>
+					<div>
+						<button>+</button>
+						<p>Hospital bed days saved = number of eligible PE patients x proportion of PE patients hospitalised x number of hospital bed days saved per PE patient treated with Xarelto</p>
+					</div>
+				</div>
+			</div>
+			<div class="jointResult">
+				<p class="combined">Combined DVT + PE Resources Saved</p>
+				<div>
+					<p>Injections avoided<sup>3-7,11</p>
+					<p data-bind="text: injectons3()"></p>
+				</div>
+				<div>
+					<p>INR clinic visits avoided<sup>3,7,8,11</sup></p>
+					<p data-bind="text: visitsINR3()"></p>
+				</div>
+				<div>
+					<p>Nurse visits avoided<sup>9</sup></p>
+					<p data-bind="text: visitsNurse3()"></p>
+				</div>
+				<div>
+					<p>Hospital bed days saved<sup>10</sup></p>
+					<p data-bind="text: daysSaved3()"></p>
+				</div>
+			</div>
+			<!-- <div class="mini-fotter">
+				<p>Numbers provided are based on general epidemiological research and on clinical trial experience from the Phase III programme with Xarelto. Healthcare practice<br/>may be different in your country (both before and after introduction of Xarelto), and thus the estimation may not reflect your country’s perspective.<br/>Actual costs are not included.</p>
+			</div> -->
 		</section>
 	</div>
 	<script src="scripts/knockout-3.1.0.js"></script>

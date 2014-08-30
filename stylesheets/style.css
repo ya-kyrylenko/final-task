@@ -12,6 +12,8 @@
 	font-family: 'Frutiger try';
 	src: url('../fonts/Frutiger LT 47 Light Condensed.ttf')
 }
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -40,9 +42,17 @@ nav button{
 	margin-right: 3px;
 
 }
+.slide-graphic{
+	position: absolute;
+}
 h2{
+	position: relative;
 	margin-top: 30px;
+	/*margin-left: 39%;*/
+	/*margin-left: 225px;*/
+	left: 228px;
 	text-align: center;
+	/*padding: 0 auto;*/
 	font-size: 28px;
 	width: 100%;
 	font-family: 'Frutiger Black';
@@ -57,6 +67,7 @@ h2{
 	width: 593px;
 	border: 2px solid #4A2278;
 	border-radius: 0 40px 0 40px;
+	background-color: white;
 }
 .graphics div div{
 
@@ -189,4 +200,159 @@ h2{
 	top: 79px;
 	left: -100px;
 	font-family: 'Frutiger try';
+}
+.slide-calculator{
+	position: absolute;
+}
+.slide-calculator h2{
+	left: 245px;
+	text-align: left;
+}
+.firstCalculator{
+	margin-left: 105px;
+
+}
+.firstCalculator, .secondCalculator{
+	margin-top: 36px;
+	width: 377px;
+	float: left;
+}
+.secondCalculator{
+	/*margin-left: 53px;*/
+}
+.inputDescription{
+	/*padding: 5px 22px 0 12px;*/
+	font-size: 9px;
+	text-align: left;
+	color: #7c7a7b;
+}
+.inputSector{
+	height: 51px;
+	width: 377px;
+	border: 1px solid #A7A7A8;
+	background: linear-gradient(to top, #99989A, #FDFEFF);
+}
+.secondCalculator{
+	margin-left: 51px;
+}
+.inputSector input::-webkit-input-placeholder{
+	font-size: 10px;
+}
+.inputSector input::-moz-input-placeholder{
+	font-size: 10px;
+}
+.inputSector input{
+	height: 29px;
+	width: 181px;
+	margin: 10px 2px 10px 10px;
+	/* font-size: 10px; */
+	padding-right: 10px;
+	text-align: right;
+}
+.inputSector button:nth-child(2){
+	border: 1px solid #DB82BA;
+	height: 29px;
+	width: 98px;
+	background: linear-gradient(to top, #E31E86 0%, #E32388 50%, #DEC4DC 100%);
+	color: white;
+}
+.inputSector button:nth-child(3){
+	height: 28px;
+	width: 28px;
+	border-radius: 50%;
+	background-color: #F0F0F0;
+	color: #502D80;
+	margin-left: 25px;
+	border: 1px solid #D9D9D8;
+}
+ .inputDescription{
+	background: linear-gradient(to top, #FFFFFF, #E0E4E8);
+	padding-left: 14px;
+	padding-top: 2px;
+}
+.calculatorResult{
+	height: 32px;
+	background: linear-gradient(to top, #ACABAB,#C1C0C0);
+}
+.calculatorResult p{
+	float: left;
+	font-family: 'Frutiger Std Bold';
+	padding: 5px 0 0 14px;
+}
+.calculatorResult sup{
+	font-size: 10px;
+}
+.calculatorResult input{
+	height: 22px;
+	width: 92px;
+	float: right;
+	margin: 3px 8px 3px 0;
+	text-align: right;
+	color: #E31E86;
+	font-family: 'Frutiger Std Bold';
+	font-size: 18px;
+}
+.calculatorBlocks div:last-child{
+	/*height: 40px;*/
+	background: linear-gradient(to top, #BCBCBB, #E1E1E0);
+	font-size: 9px;
+}
+.calculatorBlocks{
+	margin-bottom: 4px;
+	color: white;
+}
+.calculatorBlocks button{
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	color: #7C7A7B;
+	border: 1px solid #AEAEAD;
+	margin-top: 10px;
+	margin-left: 8px;
+	margin-right: 6px;
+	margin-bottom: 10px;
+	float: left;
+}
+.calculatorBlocks div:last-child p{
+	padding: 8px 15px 10px 0;
+	word-spacing: 2px;
+}
+.jointResult{
+	clear: both;
+	margin-left: 105px;
+	position: relative;
+	top: 5px;
+}
+.combined{
+	width: 796px;
+	background-color: #502D80;
+	clear: both;
+	font-size: 18px;
+	color: white;
+	padding: 5px 0 5px 10px;
+	font-family: 'Frutiger Std Bold';
+}
+.jointResult div{
+	float: left;
+	font-family: 'Frutiger Std Bold';
+	color: #7C7A7B;
+	background: linear-gradient(to top, #F4FAFE, #EBF1FA);
+	margin-right: 7px;
+}
+.jointResult div:last-child{
+	margin-right: 0;
+}
+.jointResult div p:first-child{
+	padding: 5px 5px 0 11px;
+}
+.jointResult div p:last-child{
+	color: red;
+	padding-left: 10px;
+}
+
+.jointResult sup{
+	font-size: 10px;
+}
+.calculatorResult input::-webkit-input-placeholder{
+	color: #E31E86;
 }
