@@ -40,7 +40,6 @@ nav button{
 	font-size: 20px;
 	font-family: 'Frutiger Black';
 	color: #5E5968;
-	border: 1px solid #CDCDCD;
 }
 .slide-graphic{
 	position: absolute;
@@ -175,7 +174,7 @@ h2{
 	font-size: 14px;
 	float: left;
 	position: relative;
-	top: 79px;
+	top: -1px;
 	left: -100px;
 	font-family: 'Frutiger try';
 	color: #676A6B;
@@ -348,7 +347,6 @@ h2{
 	width: 898px;
 	height: 392px;
 	background-color: rgba(255, 255, 255, 0.8);
-	/* opacity: 0.6; */
 	margin-top: 51px;
 	margin-left: 60px;
 	border: 1px solid #D9E2EB;
@@ -532,12 +530,18 @@ h2{
 .minifotter3{
 	clear: both;
 	font-size: 12px;
-	/* float: left; */
 	position: relative;
 	font-family: 'Frutiger try';
 	line-height: 12px;
 	color: #676A6B;
 	margin-left: 70px;
-	/* margin-top: 19px; */
 	top: 19px;
+}
+.people{
+	height: 100px;
+	width: 87px;
+	float: right;
+	position: relative;
+	top: -78px;
+	left: 103px;
 }

@@ -1,5 +1,83 @@
 function ViewModel() {
 
+	this.firstSlide = ko.observable(true);
+	this.secondSlide = ko.observable(false);
+	this.thirdSlide = ko.observable(false);
+
+	this.turnOnSlide1 = function(){
+		this.firstSlide(true);
+		this.secondSlide(false);
+		this.thirdSlide(false);
+
+		//якщо потрібно обнуляти терези при вході на інший слайд
+
+		document.querySelector('.leftScale').style.cssText = ' transform: translateY(0px)';
+		document.querySelector('.rightScale').style.cssText = ' transform: translateY(0px)';
+		document.querySelector('.holder').style.cssText = 'transform: rotate(0deg)';
+
+		moveGraphic();
+	}
+	this.turnOnSlide2 = function(){
+		this.firstSlide(false);
+		this.secondSlide(true);
+		this.thirdSlide(false);
+
+		// якщо потрібно обнуляти терези при вході на інший слайд
+		document.querySelector('.leftScale').style.cssText = ' transform: translateY(0px)';
+		document.querySelector('.rightScale').style.cssText = ' transform: translateY(0px)';
+		document.querySelector('.holder').style.cssText = 'transform: rotate(0deg)';
+
+
+		document.querySelector('.secondBlock').style.height = '0px';
+		document.querySelector('.firstBlock').style.height = '0px';
+		Array.prototype.forEach.call(document.getElementsByClassName('graphic-data'), function(el) {
+			el.style.visibility = 'hidden';
+		});
+	}
+	this.turnOnSlide3 = function(){
+		this.firstSlide(false);
+		this.secondSlide(false);
+		this.thirdSlide(true);
+
+
+		document.querySelector('.secondBlock').style.height = '0px';
+		document.querySelector('.firstBlock').style.height = '0px';
+		Array.prototype.forEach.call(document.getElementsByClassName('graphic-data'), function(el) {
+			el.style.visibility = 'hidden';
+		});
+	}
+
+
+	
+	this.downLeft = function(){
+		document.querySelector('.leftScale').style.cssText = ' transform: translateY(12px)';
+		document.querySelector('.rightScale').style.cssText = ' transform: translateY(-13px)';
+		document.querySelector('.holder').style.cssText = 'transform: rotate(-7deg)';
+	}
+	this.downRight = function(){
+		document.querySelector('.leftScale').style.cssText = ' transform: translateY(-13px)';
+		document.querySelector('.rightScale').style.cssText = ' transform: translateY(12px)';
+		document.querySelector('.holder').style.cssText = 'transform: rotate(7deg)';
+
+	}
+
+	var moveGraphic = function()
+	{
+		setTimeout(function(){
+			document.getElementsByClassName('firstBlock')[0].style.height = '242px';
+			document.querySelector('.secondBlock').style.height = '172px';
+		}, 1);
+		setTimeout(function(){
+
+			Array.prototype.forEach.call(document.getElementsByClassName('graphic-data'), function(el) {
+			    el.style.visibility = 'visible';
+			});
+		}, 1500);
+	}
+
+
+
+
 	this.numperDVT=ko.observable();
 	this.numberPE=ko.observable();
 	// var a = this.numperDVT() * 0.925;
@@ -115,77 +193,6 @@ function ViewModel() {
 		else return +(this.daysSaved()) + +(this.daysSaved2());
 	}, this);
 
-	this.firstSlide = ko.observable(true);
-	this.secondSlide = ko.observable(false);
-	this.thirdSlide = ko.observable(false);
-	this.turnOnSlide2 = function(){
-		this.firstSlide(false);
-		this.secondSlide(true);
-		this.thirdSlide(false);
-
-		// якщо потрібно обнуляти терези при вході на інший слайд
-		document.querySelector('.leftScale').style.cssText = ' transform: translateY(0px)';
-		document.querySelector('.rightScale').style.cssText = ' transform: translateY(0px)';
-		document.querySelector('.holder').style.cssText = 'transform: rotate(0deg)';
-
-
-		document.querySelector('.secondBlock').style.height = '0px';
-		document.querySelector('.firstBlock').style.height = '0px';
-		Array.prototype.forEach.call(document.getElementsByClassName('graphic-data'), function(el) {
-			el.style.visibility = 'hidden';
-		});
-	}
-	this.turnOnSlide3 = function(){
-		this.firstSlide(false);
-		this.secondSlide(false);
-		this.thirdSlide(true);
-
-
-		document.querySelector('.secondBlock').style.height = '0px';
-		document.querySelector('.firstBlock').style.height = '0px';
-		Array.prototype.forEach.call(document.getElementsByClassName('graphic-data'), function(el) {
-			el.style.visibility = 'hidden';
-		});
-	}
-	this.turnOnSlide1 = function(){
-		this.firstSlide(true);
-		this.secondSlide(false);
-		this.thirdSlide(false);
-
-		//якщо потрібно обнуляти терези при вході на інший слайд
-
-		document.querySelector('.leftScale').style.cssText = ' transform: translateY(0px)';
-		document.querySelector('.rightScale').style.cssText = ' transform: translateY(0px)';
-		document.querySelector('.holder').style.cssText = 'transform: rotate(0deg)';
-
-		moveGraphic();
-	}
- // -webkit-transform: translateY(-17px); 
-	this.downLeft = function(){
-		document.querySelector('.leftScale').style.cssText = ' transform: translateY(12px)';
-		document.querySelector('.rightScale').style.cssText = ' transform: translateY(-13px)';
-		document.querySelector('.holder').style.cssText = 'transform: rotate(-7deg)';
-	}
-	this.downRight = function(){
-		document.querySelector('.leftScale').style.cssText = ' transform: translateY(-13px)';
-		document.querySelector('.rightScale').style.cssText = ' transform: translateY(12px)';
-		document.querySelector('.holder').style.cssText = 'transform: rotate(7deg)';
-
-	}
-
-	var moveGraphic = function()
-	{
-		setTimeout(function(){
-			document.getElementsByClassName('firstBlock')[0].style.height = '242px';
-			document.querySelector('.secondBlock').style.height = '172px';
-		}, 1);
-		setTimeout(function(){
-
-			Array.prototype.forEach.call(document.getElementsByClassName('graphic-data'), function(el) {
-			    el.style.visibility = 'visible';
-			});
-		}, 1500);
-	}
 
 	moveGraphic();
 }
