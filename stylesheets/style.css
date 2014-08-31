@@ -76,7 +76,7 @@ h2{
 	top: -31px;
 }
 .wrapgraph div{
-	transition: 2s;
+	transition: 1s linear;
 	width: 134px;
 	float: left;
 	border-radius: 8px 8px 0 0;
@@ -178,6 +178,7 @@ h2{
 	top: 79px;
 	left: -100px;
 	font-family: 'Frutiger try';
+	color: #676A6B;
 }
 .slide-calculator{
 	position: absolute;
@@ -336,6 +337,7 @@ h2{
 	margin-left: 105px;
 	top: 42px;
 	margin-bottom: 22px;
+	color: #676A6B;
 }
 
 .slide-competitors h2{

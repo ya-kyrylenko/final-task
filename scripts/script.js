@@ -178,13 +178,13 @@ function ViewModel() {
 		setTimeout(function(){
 			document.getElementsByClassName('firstBlock')[0].style.height = '242px';
 			document.querySelector('.secondBlock').style.height = '172px';
-		}, 500);
+		}, 1);
 		setTimeout(function(){
 
 			Array.prototype.forEach.call(document.getElementsByClassName('graphic-data'), function(el) {
 			    el.style.visibility = 'visible';
 			});
-		}, 2000);
+		}, 1500);
 	}
 
 	moveGraphic();
