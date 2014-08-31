@@ -10,7 +10,7 @@
 		<nav>
 			<button data-bind="click: turnOnSlide1">Graphics</button>
 			<button data-bind="click: turnOnSlide2" class="button2">Calculator</button>
-			<button>Competitors</button>
+			<button data-bind="click: turnOnSlide3">Competitors</button>
 		</nav>
 		<section class="slide-graphic" data-bind="visible: firstSlide">
 			<h2>Xarelto<sup>®</sup>: An Effective Treatment Option<br/>in Your VTE Patients width Cancer<sup>a,8</sup></h2>
@@ -169,9 +169,52 @@
 					<p data-bind="text: daysSaved3()"></p>
 				</div>
 			</div>
-			<!-- <div class="mini-fotter">
+			<div class="minifotter2">
 				<p>Numbers provided are based on general epidemiological research and on clinical trial experience from the Phase III programme with Xarelto. Healthcare practice<br/>may be different in your country (both before and after introduction of Xarelto), and thus the estimation may not reflect your country’s perspective.<br/>Actual costs are not included.</p>
-			</div> -->
+			</div>
+		</section>
+		<section class="slide-competitors" data-bind="visible: thirdSlide">
+			<h2>Xarelto<sup>®</sup>DVT Patients Reported Higher Satisfaction<sup>a,16</sup></h2>
+			<div class="wrapper-competitor">
+				<div class="preference">
+					<p>Higher Preference</p>
+					<div class="arrow"></div>
+					<p>Lover Preference</p>
+				</div>
+				<div class="balance">
+					<div class="holder"></div>
+					<div class="leftScale">
+						<p>80.8</p>
+					</div>
+					<div class="rightScale">
+						<p>72.7</p>
+					</div>
+					<div class="stand">
+						<div class="rockethead"></div>
+						<div class="rocketbody"></div>
+						<div class="pedestal">
+							<p>p<0.0001</p>
+						</div>
+					</div>
+					<p class="anagraph">Global satisfaction<sup>b</sup></p>
+				</div>
+				<div class="legend">
+					<div class="clicker1" data-bind="click: downLeft"></div>
+					<p class="data-click">Xarelto (N=702)</p>
+				</div>
+				<div class="legend">
+					<div class="clicker2" data-bind="click: downRight"></div>
+					<p class="data-click">Enoxaparin/VKA (N=677)</p>
+				</div>
+			</div>
+			<div class="leftBlock">
+				<p><span>TSQM II</span><br> Global Satisfaction</p>
+			</div>
+			<div class="minifotter3">
+				<p><sup>a</sup>Patients participating in EINSTEIN DVT trial had confirmed acute symptomatic DVT without symptomatic PE and completed two measures of treatment satisfaction;<br>
+                ACTS (Anti Clot Treatment Scale) and TSQM (Treatment Satisfaction Questionnaire for Medication) in follow up visits.<sup>5,16</sup></br>
+                <sup>b</sup>Score values given for burdens and benefits measured by ACTS; effectiveness, side effects, convenience and global satisfaction measured by TSQM scale.<sup>16</sup></p>
+			</div>
 		</section>
 	</div>
 	<script src="scripts/knockout-3.1.0.js"></script>

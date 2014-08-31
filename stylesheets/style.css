@@ -18,9 +18,6 @@
 	margin: 0;
 	padding: 0;
 }
-body{
-	/* margin: 0 auto; */
-}
 
 .wrapper {
 	width: 1024px;
@@ -37,10 +34,13 @@ nav {
 }
 nav button{
 	height: 100%;
-	width: 33%;
+	width: 33.3333%;
 	float: left;
-	margin-right: 3px;
-
+	/* margin-right: 3px; */
+	font-size: 20px;
+	font-family: 'Frutiger Black';
+	color: #5E5968;
+	border: 1px solid #CDCDCD;
 }
 .slide-graphic{
 	position: absolute;
@@ -48,18 +48,14 @@ nav button{
 h2{
 	position: relative;
 	margin-top: 30px;
-	/*margin-left: 39%;*/
-	/*margin-left: 225px;*/
 	left: 228px;
 	text-align: center;
-	/*padding: 0 auto;*/
 	font-size: 28px;
 	width: 100%;
 	font-family: 'Frutiger Black';
 	color: #432171;
 }
 .graphics{
-	/* top: 70px; */
 	margin-top: 70px;
 	position: relative;
 	left: 214px;
@@ -71,7 +67,6 @@ h2{
 }
 .graphics div div{
 
-	/*position: absolute;*/
 }
 .wrapgraph{
 	left: 150px;
@@ -87,11 +82,9 @@ h2{
 	border-radius: 8px 8px 0 0;
 }
 .firstBlock{
-	/* top: 30px; */
-	 position: absolute; 
+	position: absolute; 
 	background-color: #1785A3;
 	bottom: 0px;
-	/* height: 67%; */
 	height: 0;
 }
 .secondBlock{
@@ -100,7 +93,6 @@ h2{
 	bottom: 0px;
 	background-color: #E3007C;
 	height: 0;
-	/* height: 0; */
 }
 .graphic-data{
 	visibility: hidden;
@@ -110,19 +102,13 @@ h2{
 	color: white;
 }
 .firstBlock p:last-child{
-	/* margin-top: 40px; */
 	position: relative;
 	top: 177px; 
-/*	font-size: 10px;
-	font-family: 'Frutiger Black';
-	color: white;*/
 }
 
 .secondBlock p:last-child{
-	/* margin-top: 40px; */
 	position: relative;
 	top: 120px;
-	/* margin-top: 117px; */
 
 }
 .secondBlock p:first-child, .firstBlock p:first-child{
@@ -130,9 +116,6 @@ h2{
 	font-size: 16px;
 }
 .graduation{
-	/*float: left;*/
-	/*margin-left: 35px;*/
-	/* margin-top: 25px; */
 	list-style: none;
 	position: relative;
 	left: 36px;
@@ -140,7 +123,6 @@ h2{
 }
 .graduation li{
 	margin-top: 15px;
-	/* font-weight: bold; */
 	font-family: 'Frutiger Std Bold';
 }
 .signature{
@@ -159,7 +141,6 @@ h2{
 	position: relative;
 }
 .graphics-data{
-	/* width: 170px; */
 	text-align: center;
 	margin-right: 10%;
 	position: relative;
@@ -168,8 +149,6 @@ h2{
 }
 .horizontal-line hr{
 	width: 542px;
-	/*height: 2px;
-	background-color: #4a2278;*/
 	position: relative;
 	border: 2px solid #4a2278; 
 }
@@ -177,7 +156,6 @@ h2{
 	position: relative;
 	left: -4px;
 	top: 2px;
-	/*font-family: 'Frutiger Std Bold';*/
 }
 
 .horizontal-line{
@@ -217,11 +195,7 @@ h2{
 	width: 377px;
 	float: left;
 }
-.secondCalculator{
-	/*margin-left: 53px;*/
-}
 .inputDescription{
-	/*padding: 5px 22px 0 12px;*/
 	font-size: 9px;
 	text-align: left;
 	color: #7c7a7b;
@@ -245,7 +219,6 @@ h2{
 	height: 29px;
 	width: 181px;
 	margin: 10px 2px 10px 10px;
-	/* font-size: 10px; */
 	padding-right: 10px;
 	text-align: right;
 }
@@ -293,7 +266,6 @@ h2{
 	font-size: 18px;
 }
 .calculatorBlocks div:last-child{
-	/*height: 40px;*/
 	background: linear-gradient(to top, #BCBCBB, #E1E1E0);
 	font-size: 9px;
 }
@@ -346,13 +318,224 @@ h2{
 	padding: 5px 5px 0 11px;
 }
 .jointResult div p:last-child{
-	color: red;
+	color: #E31E86;
 	padding-left: 10px;
+	padding-bottom: 15px;
 }
 
 .jointResult sup{
 	font-size: 10px;
 }
-.calculatorResult input::-webkit-input-placeholder{
+.number{
 	color: #E31E86;
+}
+.minifotter2{
+	position: relative; 
+	font-size: 12px;
+	font-family: 'Frutiger try';
+	margin-left: 105px;
+	top: 42px;
+	margin-bottom: 22px;
+}
+
+.slide-competitors h2{
+	left: -17px;
+	color: #582982;
+}
+.wrapper-competitor{
+	width: 898px;
+	height: 392px;
+	background-color: rgba(255, 255, 255, 0.8);
+	/* opacity: 0.6; */
+	margin-top: 51px;
+	margin-left: 60px;
+	border: 1px solid #D9E2EB;
+}
+.preference{
+	width: 124px;
+	float: left;
+}
+.arrow{
+	width: 11px;
+	height: 203px;
+	background: linear-gradient(to top, #1785A3 0%, #88449A 50%, #FF0090 100%);
+	position: relative;
+	margin-left: 50px;
+}
+.arrow:before{
+	content: "";
+	position: absolute;
+	top: -28px;
+	left: -8px;
+	width: 0;
+	height: 0;
+	border-left: 14px solid transparent;
+	border-right: 14px solid transparent;
+	border-bottom: 28px solid #ff0090;
+}
+.arrow:after{
+	content: "";
+	position: absolute;
+	bottom: -28px;
+	left: -8px;
+	width: 0;
+	height: 0;
+	border-left: 14px solid transparent;
+	border-right: 14px solid transparent;
+	border-top: 28px solid #1785A3;
+}
+.preference{
+	margin-left: 50px;
+	margin-top: 31px;
+	font-family: 'Frutiger Black';
+	font-size: 13px;
+}
+.preference p:first-child{
+	margin-bottom: 37px;
+}
+.preference p:last-child{
+	margin-top: 41px;
+}
+.balance{
+	float: left;
+	position: relative;
+	left: 117px;
+	top: 64px;
+}
+.holder{
+	transition: 1s linear;
+	width: 278px;
+	height: 10px;
+	background: linear-gradient( to right, #5B2C81 0%, #7965A7 50%, #5B2C81 100%);
+}
+.leftScale{
+	height: 212px;
+	width: 148px;
+	background: url('../assets/images/left.png');
+	background-size: contain;
+	position: relative;
+	left: -41px;
+	float: left;
+	transition: 1s linear;
+}
+.rightScale{
+	height: 212px;
+	width: 148px;
+	background: url('../assets/images/right.png');
+	background-size: contain;
+	position: relative;
+	left: 23px;
+	float: left;
+	transition: 1s linear;
+}
+.rightScale p, .leftScale p{
+	font-size: 24px;
+	font-family: 'Frutiger Black';
+	left: 50px;
+	position: relative;
+	top: 163px;
+	color: white;
+}
+.rockethead{
+	border-left: 11px solid transparent;
+	border-right: 11px solid transparent;
+	border-bottom: 50px solid #5B2C81;
+	position: relative;
+	width: 0;
+	left: 128px;
+	top: -1px;
+}
+.rocketbody{
+	top: -1px;
+	position: relative;
+	margin-left: 128px;
+	width: 22px;
+	height: 184px;
+	background-color: #5B2C81;
+	background: linear-gradient( to top, #5C2E82 0%, #7863A6 50%, #5B2C81 100%);
+}
+.pedestal{
+	top: -1px;
+	position: relative;
+	height: 26px;
+	width: 146px;
+	background-color: #5B2C81;
+	margin-left: 66px;
+}
+.pedestal p{
+	top: 5px;
+	font-size: 12px;
+	left: 43px;
+	margin: 0 auto;
+	font-family: 'Frutiger Black';
+	position: relative;
+	color: white;
+}
+.anagraph{
+	position: relative;
+	font-family: 'Frutiger Black';
+	font-size: 13px;
+	color: #5b2c81;
+	left: 73px;
+	top: 7px;
+}
+.clicker1{
+	float: left;
+	height: 21px;
+	width: 21px;
+	background-color: #FF0090;
+	margin-right: 6px;
+}
+.clicker2{
+	margin-right: 6px;
+	float: left;
+	height: 21px;
+	width: 21px;
+	background-color: #1685A2;
+}
+.legend{
+	margin-bottom: 8px;
+	position: relative;
+	left: 186px;
+	top: 30px;
+}
+.data-click{
+	font-family: 'Frutiger Black';
+	font-size: 14px;
+	padding-top: 3px;
+}
+.leftBlock{
+	width: 147px;
+	height: 101px;
+	position: relative;
+	right: 64px;
+	float: right;
+	border-right: 1px solid #D3DDE8;
+	border-left: 1px solid #D3DDE8;
+	border-bottom: 1px solid #D3DDE8;
+	background-color: rgba(255, 255, 255, 0.8);
+	top: -1px;
+}
+.leftBlock p{
+	font-size: 18px;
+	text-align: center;
+	color: #4a2278;
+	font-family: 'Frutiger Black';
+	margin-top: 17px;
+	line-height: 23px;
+}
+.leftBlock span{
+	font-size: 13px;
+}
+.minifotter3{
+	clear: both;
+	font-size: 12px;
+	/* float: left; */
+	position: relative;
+	font-family: 'Frutiger try';
+	line-height: 12px;
+	color: #676A6B;
+	margin-left: 70px;
+	/* margin-top: 19px; */
+	top: 19px;
 }

@@ -121,15 +121,25 @@ function ViewModel() {
 	this.turnOnSlide2 = function(){
 		this.firstSlide(false);
 		this.secondSlide(true);
+		this.thirdSlide(false);
+
+		// якщо потрібно обнуляти терези при вході на інший слайд
+		document.querySelector('.leftScale').style.cssText = ' transform: translateY(0px)';
+		document.querySelector('.rightScale').style.cssText = ' transform: translateY(0px)';
+		document.querySelector('.holder').style.cssText = 'transform: rotate(0deg)';
 
 
-		// document.querySelector('.button2').addEventListener('click', function(){
-		// 	document.querySelector('.secondBlock').style.height = '0px';
-		// 	document.querySelector('.firstBlock').style.height = '0px';
-		// 	for( var i = 0; i< document.getElementsByClassName('graphic-data').length; i++){
-		// 		document.getElementsByClassName('graphic-data')[i].style.visibility = "hidden";
-		// 	}
-		// }, false)
+		document.querySelector('.secondBlock').style.height = '0px';
+		document.querySelector('.firstBlock').style.height = '0px';
+		Array.prototype.forEach.call(document.getElementsByClassName('graphic-data'), function(el) {
+			el.style.visibility = 'hidden';
+		});
+	}
+	this.turnOnSlide3 = function(){
+		this.firstSlide(false);
+		this.secondSlide(false);
+		this.thirdSlide(true);
+
 
 		document.querySelector('.secondBlock').style.height = '0px';
 		document.querySelector('.firstBlock').style.height = '0px';
@@ -140,15 +150,28 @@ function ViewModel() {
 	this.turnOnSlide1 = function(){
 		this.firstSlide(true);
 		this.secondSlide(false);
-		// document.querySelector('.secondBlock').style.height = '0px';
-		// document.querySelector('.firstBlock').style.height = '0px';
-		// Array.prototype.forEach.call(document.getElementsByClassName('graphic-data'), function(el) {
-		// 	el.style.visibility = 'hidden';
-		// });
+		this.thirdSlide(false);
+
+		//якщо потрібно обнуляти терези при вході на інший слайд
+
+		document.querySelector('.leftScale').style.cssText = ' transform: translateY(0px)';
+		document.querySelector('.rightScale').style.cssText = ' transform: translateY(0px)';
+		document.querySelector('.holder').style.cssText = 'transform: rotate(0deg)';
+
 		moveGraphic();
 	}
+ // -webkit-transform: translateY(-17px); 
+	this.downLeft = function(){
+		document.querySelector('.leftScale').style.cssText = ' transform: translateY(12px)';
+		document.querySelector('.rightScale').style.cssText = ' transform: translateY(-13px)';
+		document.querySelector('.holder').style.cssText = 'transform: rotate(-7deg)';
+	}
+	this.downRight = function(){
+		document.querySelector('.leftScale').style.cssText = ' transform: translateY(-13px)';
+		document.querySelector('.rightScale').style.cssText = ' transform: translateY(12px)';
+		document.querySelector('.holder').style.cssText = 'transform: rotate(7deg)';
 
-
+	}
 
 	var moveGraphic = function()
 	{
@@ -157,26 +180,11 @@ function ViewModel() {
 			document.querySelector('.secondBlock').style.height = '172px';
 		}, 500);
 		setTimeout(function(){
-			// function bla(element, index, array) {
-   //  			// element.style.visibility = 'visible';
-   //  			element.style.visibility = 'visible';
-			// };
-			// var learn = ;
 
 			Array.prototype.forEach.call(document.getElementsByClassName('graphic-data'), function(el) {
 			    el.style.visibility = 'visible';
 			});
-
-
-			// for( var i = 0; i< document.getElementsByClassName('graphic-data').length; i++){
-			// 	document.getElementsByClassName('text')[i].style.visibility = "visible";
-			// }
-
-
-			// for( var i= 0; i< document.querySelectorAll('.graphic-data').length; i++){
-			// 	document.querySelectorAll('.graphic-data')[i].style.visibility = 'visible';
-			// }
-		}, 3500);
+		}, 2000);
 	}
 
 	moveGraphic();
