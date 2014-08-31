@@ -15,8 +15,16 @@ function ViewModel() {
 		document.querySelector('.rightScale').style.cssText = ' transform: translateY(0px)';
 		document.querySelector('.holder').style.cssText = 'transform: rotate(0deg)';
 
+
+		document.querySelector('.secondBlock').style.height = '0px';
+		document.querySelector('.firstBlock').style.height = '0px';
+		Array.prototype.forEach.call(document.getElementsByClassName('graphic-data'), function(el) {
+			el.style.visibility = 'hidden';
+		});
+
 		moveGraphic();
 	}
+
 	this.turnOnSlide2 = function(){
 		this.firstSlide(false);
 		this.secondSlide(true);
